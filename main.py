@@ -32,11 +32,25 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
-    print(mismatch)
+    
+    user_input = input().strip()
+
+    
+    if user_input == "I":
+        brackets_input = input().strip()
+        print(find_mismatch(brackets_input))
+    elif user_input == "F":
+        
+
+        file_path = input().strip()
+        with open(file_path, "r") as f:
+            brackets_input = f.read().strip()
+        print(find_mismatch(brackets_input))
+    else:
+        print("Invalid input")
 
 
 if __name__ == "__main__":
     main()
+
 
